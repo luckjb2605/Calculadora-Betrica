@@ -100,13 +100,13 @@ submitBtn.addEventListener('click', () => {
     return;
   }
 
-  if (startingUnit === endUnit)
-  {
-    outputText.textContent = numToBeConverted;
-    return;
-  } else
-  {
-    const result = numToBeConverted * conversionSheet[startingUnit][endUnit];
-    outputText.textContent = result;
-  }
+  const result = startingUnit === endUnit
+    ? numToBeConverted
+    : numToBeConverted * conversionSheet[startingUnit][endUnit];
+
+  outputText.textContent = (Math.round(result*100) / 100).toFixed(2);
 });
+
+inputNumber.addEventListener('keydown', (e) => {
+  if (e.key === "Enter") submitBtn.click();
+})
