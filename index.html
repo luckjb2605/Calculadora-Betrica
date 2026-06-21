@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+  <title>Conversor Metro-Beto</title>
+</head>
+<body>
+  
+  <div class="main-container">
+    <h1>Conversor - Novo SI</h1>
+
+    <input type="number" id="input" placeholder="Digite aqui o número a ser convertido">
+    
+    <fieldset class="scales">
+
+      <label class="sourceUnit">Converter de:</label>
+      <label class="targetUnit">Para:</label>
+
+      <select class="sourceUnit" id="sourceUnit">
+        <option value="" disabled selected hidden>Selecione uma unidade</option>
+        <option value="centibetro">Betímetro/CentiBeto</option>
+        <option value="betro">Beto/Betro</option>
+        <option value="centimetro">Centímetro</option>
+        <option value="metro">Metro</option>
+      </select>
+      
+      <select class="targetUnit" id="targetUnit">
+        <option value="" disabled selected hidden>Selecione uma unidade</option>
+        <option value="centibetro">Betímetro/CentiBeto</option>
+        <option value="betro">Beto/Betro</option>
+        <option value="centimetro">Centímetro</option>
+        <option value="metro">Metro</option>
+      </select>
+
+    </fieldset>
+
+    <button class="submit">Calcular</button>
+
+    <output class="output">Sua conversão aparecerá aqui!</output>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

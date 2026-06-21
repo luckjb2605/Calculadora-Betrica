@@ -1,0 +1,140 @@
+*
+{
+  box-sizing: border-box;
+  font-family: "Fira Code";
+}
+
+body
+{
+  background-image: url(https://images5.alphacoders.com/989/thumb-1920-989105.png);
+  background-position: center;
+  background-size: cover;
+  
+  display: flex;
+  margin: 0;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-container
+{
+  background: hsl(0, 0%, 20%);
+  font-weight: 700;
+  color: aliceblue;
+  
+  display: flex;
+  flex-direction: column;
+  
+  box-shadow: 0px 10px 20px #000000ff;
+  border-radius: 20px;
+  
+  width: 500px;
+  height: 400px;
+  
+  text-align: center;
+  gap: 1rem;
+  
+  margin-bottom: 80px;
+  padding: 15px 20px 30px;
+}
+
+input#input
+{
+  border-radius: 10px;
+  border: solid transparent 2px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0px 10px;
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+}
+
+input#input.error
+{
+  /* color:hsl(350, 100%, 30%); */
+  background: hsl(350, 100%, 80%);
+  border: solid hsl(350, 100%, 40%) 2px;
+}
+
+input#input.error::placeholder
+{
+  color:hsl(350, 100%, 30%);
+}
+
+fieldset.scales
+{
+  display: grid;
+  /* flex-direction: column; */
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 0.5rem;
+  border: none;
+  align-items: center;
+}
+
+fieldset.scales select
+{
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.scales label.error
+{
+  color: hsl(350, 100%, 40%);
+}
+
+.scales select.error
+{
+  background: hsl(350, 100%, 80%);
+  border: solid hsl(350, 100%, 40%) 2px;
+}
+
+button.submit
+{
+  margin: 0px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #050505;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: transform 0.1s linear;
+  cursor: pointer;
+}
+
+button.submit:active
+{
+  transform: scale(99%);
+  background: #111111;
+}
+
+output.output
+{
+  color: black;
+  padding: 15px 10px;
+  background: hsl(0, 0%, 90%);
+  border: solid #050505 2px;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+
+output.output.error
+{
+  /* color: hsl(350, 00%, 30%); */
+  /* border: solid hsl(350, 100%, 30%) 2px; */
+  /* background: hsl(350, 100%, 80%); */
+}
